@@ -6,7 +6,6 @@ rm docker-compose*
 wget https://raw.githubusercontent.com/edrisse/openmrs-module-msfcore/master/backup/docker-compose/docker-compose.yml
 wget https://raw.githubusercontent.com/edrisse/openmrs-module-msfcore/master/backup/docker-compose/docker-compose.override.yml
 wget https://raw.githubusercontent.com/edrisse/openmrs-module-msfcore/master/backup/docker-compose/docker-compose.prod.yml
-wget https://raw.githubusercontent.com/edrisse/openmrs-module-msfcore/master/backup/docker-compose/zip_file_password.txt
 echo $1 > zip_file_password.txt
 mkdir backup
 else
