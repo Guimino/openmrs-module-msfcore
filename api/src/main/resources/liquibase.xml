@@ -97,4 +97,10 @@
 			<column name="uuid" value="fc339d1c-b11b-11e8-96f8-529269fb1459" />
 		</insert>
 	</changeSet>
+	
+	<changeSet id="20180927-0910" author="guimino"> 
+		<comment>setting the default locale to en using the language code(ISO 639-1)</comment> 
+		<update tableName="global_property"><column name="property_value" value="en"/><where> property = 'default_locale'</where></update> 
+	</changeSet>
+	
 </databaseChangeLog>

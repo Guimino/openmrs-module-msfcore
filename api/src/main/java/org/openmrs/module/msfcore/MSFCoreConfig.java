@@ -351,4 +351,6 @@ public class MSFCoreConfig {
     public final static String GP_SYNC_WITH_DHIS2 = "msfcore.syncWithDHISOnPatientRegistration";
 
     public final static String URL_POSTFIX_OPTIONSETS = "/api/optionSets.json?paging=false&fields=name,options[:code,name]";
+
+    public final static String WGT_APP_DIAGNOSES_ID = "coreapps.diagnoses";
 }

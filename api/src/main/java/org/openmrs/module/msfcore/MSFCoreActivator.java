@@ -67,7 +67,8 @@ public class MSFCoreActivator extends BaseModuleActivator {
         Context.getService(AppFrameworkService.class).disableApp(MSFCoreConfig.REGISTRATION_APP_EXTENSION_ID);
         Context.getService(AppFrameworkService.class).enableApp(MSFCoreConfig.MSF_REGISTRATION_APP_EXTENSION_ID);
 
-        // disable the default find patient app to provide one which allows searching for patients at the footer of the search for patients page
+        // disable the default find patient app to provide one which allows
+        // searching for patients at the footer of the search for patients page
         Context.getService(AppFrameworkService.class).disableApp(MSFCoreConfig.SEARCH_APP_EXTENSION_ID);
         Context.getService(AppFrameworkService.class).enableApp(MSFCoreConfig.MSF_SEARCH_APP_EXTENSION_ID);
 
@@ -106,6 +107,9 @@ public class MSFCoreActivator extends BaseModuleActivator {
 
         log.info("Installing MSF Forms");
         installMsfForms();
+
+        log.info("Disabling diagnoses");
+        Context.getService(AppFrameworkService.class).disableApp(MSFCoreConfig.WGT_APP_DIAGNOSES_ID);
     }
 
     private void removeMSFMeta() {
