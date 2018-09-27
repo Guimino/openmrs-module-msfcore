@@ -16,6 +16,7 @@ import java.util.Scanner;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.openmrs.GlobalProperty;
 import org.openmrs.PatientIdentifierType;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.BaseModuleActivator;
@@ -52,6 +53,7 @@ public class MSFCoreActivator extends BaseModuleActivator {
         Context.getService(DHISService.class).transferDHISMappingsToDataDirectory();
         Context.getService(DHISService.class).installDHIS2Metadata();
 
+        setGlobalPropertyDefaultLocale();
         installMSFMeta();
 
         // ensure 'Auto Close Visits Task' is started
@@ -147,6 +149,14 @@ public class MSFCoreActivator extends BaseModuleActivator {
         // disable the MSF find patient app and enable the default core apps one
         Context.getService(AppFrameworkService.class).enableApp(MSFCoreConfig.SEARCH_APP_EXTENSION_ID);
         Context.getService(AppFrameworkService.class).disableApp(MSFCoreConfig.MSF_SEARCH_APP_EXTENSION_ID);
+    }
+
+    private void setGlobalPropertyDefaultLocale() {
+        log.info("Setting the Global Property default_locale ");
+        GlobalProperty defaultLocale = Context.getAdministrationService().getGlobalPropertyByUuid(
+                        MSFCoreConfig.GLOBAL_PROPERTY_DEFAULT_LOCALE_UUID);
+        defaultLocale.setPropertyValue(Context.getLocale().getLanguage().toLowerCase());
+        Context.getAdministrationService().saveGlobalProperty(defaultLocale);
     }
 
     /**
