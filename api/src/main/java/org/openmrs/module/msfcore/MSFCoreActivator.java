@@ -150,6 +150,9 @@ public class MSFCoreActivator extends BaseModuleActivator {
         // disable the MSF find patient app and enable the default core apps one
         Context.getService(AppFrameworkService.class).enableApp(MSFCoreConfig.SEARCH_APP_EXTENSION_ID);
         Context.getService(AppFrameworkService.class).disableApp(MSFCoreConfig.MSF_SEARCH_APP_EXTENSION_ID);
+
+        log.info("Enabling diagnoses");
+        Context.getService(AppFrameworkService.class).enableApp(MSFCoreConfig.WGT_APP_DIAGNOSES_ID);
     }
 
     /**
