@@ -153,8 +153,8 @@ public class MSFCoreActivator extends BaseModuleActivator {
 
     private void setGlobalPropertyDefaultLocale() {
         log.info("Setting the Global Property default_locale ");
-        GlobalProperty defaultLocale = Context.getAdministrationService().getGlobalPropertyByUuid(
-                        MSFCoreConfig.GLOBAL_PROPERTY_DEFAULT_LOCALE_UUID);
+        GlobalProperty defaultLocale = Context.getAdministrationService().getGlobalPropertyObject(
+                        MSFCoreConfig.GLOBAL_PROPERTY_DEFAULT_LOCALE_PROPERTY_NAME);
         defaultLocale.setPropertyValue(Context.getLocale().getLanguage().toLowerCase());
         Context.getAdministrationService().saveGlobalProperty(defaultLocale);
     }

@@ -322,7 +322,7 @@ public class MSFCoreConfig {
 
     public final static String LOCATION_UID_ATTRIBUTE_VODYANE_UUID = "ccbed524-b6d4-11e8-96f8-529269fb0036";
 
-    public final static String GLOBAL_PROPERTY_DEFAULT_LOCALE_UUID = "71870828-e88b-4d0b-9c41-47ec2586d064";
+    public final static String GLOBAL_PROPERTY_DEFAULT_LOCALE_PROPERTY_NAME = "default_locale";
 
     public final static String GP_DHIS_HOST = "msfcore.dhisHost";
 
