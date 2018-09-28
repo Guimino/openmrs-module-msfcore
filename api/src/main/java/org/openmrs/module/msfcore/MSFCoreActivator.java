@@ -108,7 +108,7 @@ public class MSFCoreActivator extends BaseModuleActivator {
         installMsfForms();
 
         log.info("Disabling diagnoses");
-        Context.getService(AppFrameworkService.class).disableApp(MSFCoreConfig.WGT_APP_DIAGNOSES_ID);
+        Context.getService(AppFrameworkService.class).disableApp(MSFCoreConfig.DIAGNOSES_APP_EXTENSION_ID);
     }
 
     private void removeMSFMeta() {
@@ -152,7 +152,7 @@ public class MSFCoreActivator extends BaseModuleActivator {
         Context.getService(AppFrameworkService.class).disableApp(MSFCoreConfig.MSF_SEARCH_APP_EXTENSION_ID);
 
         log.info("Enabling diagnoses");
-        Context.getService(AppFrameworkService.class).enableApp(MSFCoreConfig.WGT_APP_DIAGNOSES_ID);
+        Context.getService(AppFrameworkService.class).enableApp(MSFCoreConfig.DIAGNOSES_APP_EXTENSION_ID);
     }
 
     /**

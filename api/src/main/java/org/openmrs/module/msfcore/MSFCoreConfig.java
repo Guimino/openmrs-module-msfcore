@@ -22,6 +22,7 @@ public class MSFCoreConfig {
 
     public final static String REGISTRATION_APP_EXTENSION_ID = "referenceapplication.registrationapp.registerPatient";
     public final static String SEARCH_APP_EXTENSION_ID = "coreapps.findPatient";
+    public final static String DIAGNOSES_APP_EXTENSION_ID = "coreapps.diagnoses";
 
     public final static String MSF_REGISTRATION_APP_EXTENSION_ID = "msfcore.registrationapp";
     public final static String MSF_SEARCH_APP_EXTENSION_ID = "msfcore.findPatient";
@@ -352,5 +353,4 @@ public class MSFCoreConfig {
 
     public final static String URL_POSTFIX_OPTIONSETS = "/api/optionSets.json?paging=false&fields=name,options[:code,name]";
 
-    public final static String WGT_APP_DIAGNOSES_ID = "coreapps.diagnoses";
 }
