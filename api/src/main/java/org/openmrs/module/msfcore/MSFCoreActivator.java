@@ -153,9 +153,9 @@ public class MSFCoreActivator extends BaseModuleActivator {
     }
 
     private void setGlobalPropertyDefaultLocale() {
-        log.info("Setting the Global Property default_locale ");
-        GlobalProperty defaultLocale = Context.getAdministrationService().getGlobalPropertyObject(
-                        OpenmrsConstants.GLOBAL_PROPERTY_DEFAULT_LOCALE);
+		log.info("Setting the Global Property default_locale ");
+		GlobalProperty defaultLocale = Context.getAdministrationService().
+        		getGlobalPropertyObject(OpenmrsConstants.GLOBAL_PROPERTY_DEFAULT_LOCALE);
         defaultLocale.setPropertyValue(Context.getLocale().getLanguage().toLowerCase());
         Context.getAdministrationService().saveGlobalProperty(defaultLocale);
     }
