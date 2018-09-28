@@ -322,8 +322,6 @@ public class MSFCoreConfig {
 
     public final static String LOCATION_UID_ATTRIBUTE_VODYANE_UUID = "ccbed524-b6d4-11e8-96f8-529269fb0036";
 
-    public final static String GLOBAL_PROPERTY_DEFAULT_LOCALE_PROPERTY_NAME = "default_locale";
-
     public final static String GP_DHIS_HOST = "msfcore.dhisHost";
 
     public final static String GP_OPENHIM_TRACKER_URL = "msfcore.openhimTrackerUrl";

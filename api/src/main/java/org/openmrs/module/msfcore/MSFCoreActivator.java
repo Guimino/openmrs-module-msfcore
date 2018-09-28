@@ -35,6 +35,7 @@ import org.openmrs.module.msfcore.metadata.MSFMetadataBundle;
 import org.openmrs.module.msfcore.metadata.PatientIdentifierTypes;
 import org.openmrs.module.referencemetadata.ReferenceMetadataConstants;
 import org.openmrs.scheduler.TaskDefinition;
+import org.openmrs.util.OpenmrsConstants;
 
 /**
  * This class contains the logic that is run every time this module is either
@@ -154,7 +155,7 @@ public class MSFCoreActivator extends BaseModuleActivator {
     private void setGlobalPropertyDefaultLocale() {
         log.info("Setting the Global Property default_locale ");
         GlobalProperty defaultLocale = Context.getAdministrationService().getGlobalPropertyObject(
-                        MSFCoreConfig.GLOBAL_PROPERTY_DEFAULT_LOCALE_PROPERTY_NAME);
+                        OpenmrsConstants.GLOBAL_PROPERTY_DEFAULT_LOCALE);
         defaultLocale.setPropertyValue(Context.getLocale().getLanguage().toLowerCase());
         Context.getAdministrationService().saveGlobalProperty(defaultLocale);
     }
